@@ -24,6 +24,7 @@
     <sprite>sprites\logoSpr</sprite>
     <sprite>sprites\playSpr</sprite>
     <sprite>sprites\tutorialSpr</sprite>
+    <sprite>sprites\menuArrowsSpr</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -53,6 +54,7 @@
     <object>objects\titleObj</object>
     <object>objects\playObj</object>
     <object>objects\tutorialObj</object>
+    <object>objects\menuArrowsObj</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\gameSetup</room>
