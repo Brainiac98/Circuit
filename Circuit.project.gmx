@@ -11,6 +11,13 @@
     <sound>sound\selectOptionSnd</sound>
   </sounds>
   <sprites name="sprites">
+    <sprites name="Text Sprites">
+      <sprite>sprites\tutorial1TextSpr</sprite>
+      <sprite>sprites\tutorial2TextSpr</sprite>
+      <sprite>sprites\tutorial3TextSpr</sprite>
+      <sprite>sprites\tutorial4TextSpr</sprite>
+      <sprite>sprites\tutorial5TextSpr</sprite>
+    </sprites>
     <sprite>sprites\quadSpr</sprite>
     <sprite>sprites\triLinkSpr</sprite>
     <sprite>sprites\lineSpr</sprite>
@@ -25,15 +32,11 @@
     <sprite>sprites\playSpr</sprite>
     <sprite>sprites\tutorialSpr</sprite>
     <sprite>sprites\menuArrowsSpr</sprite>
-    <sprite>sprites\tutorial1TextSpr</sprite>
-    <sprite>sprites\tutorial2TextSpr</sprite>
-    <sprite>sprites\tutorial3TextSpr</sprite>
-    <sprite>sprites\tutorial4TextSpr</sprite>
-    <sprite>sprites\tutorial5TextSpr</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <objects name="objects">
+    <object>objects\menuLink</object>
     <objects name="Fixed Position Links">
       <object>objects\endFaceRight</object>
       <object>objects\endFaceLeft</object>
@@ -50,7 +53,6 @@
     <object>objects\lineObj</object>
     <object>objects\dualObj</object>
     <object>objects\endLinkObj</object>
-    <object>objects\menuLink</object>
     <object>objects\pointAObj</object>
     <object>objects\pointBObj</object>
     <object>objects\pointCObj</object>
@@ -74,6 +76,16 @@
     <room>rooms\tutorialFour</room>
     <room>rooms\tutorialFive</room>
     <room>rooms\menu</room>
+    <room>rooms\level1</room>
+    <room>rooms\level2</room>
+    <room>rooms\level3</room>
+    <room>rooms\level4</room>
+    <room>rooms\level5</room>
+    <room>rooms\level6</room>
+    <room>rooms\level7</room>
+    <room>rooms\level8</room>
+    <room>rooms\level9</room>
+    <room>rooms\level10</room>
     <room>rooms\roomTemplate</room>
   </rooms>
   <help>
