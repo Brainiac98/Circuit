@@ -23,6 +23,7 @@
     <sprite>sprites\pointDSpr</sprite>
     <sprite>sprites\logoSpr</sprite>
     <sprite>sprites\playSpr</sprite>
+    <sprite>sprites\tutorialSpr</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -51,15 +52,16 @@
     <object>objects\controllerObj</object>
     <object>objects\titleObj</object>
     <object>objects\playObj</object>
+    <object>objects\tutorialObj</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\gameSetup</room>
-    <room>rooms\menu</room>
     <room>rooms\tutorialOne</room>
     <room>rooms\tutorialTwo</room>
     <room>rooms\tutorialThree</room>
     <room>rooms\tutorialFour</room>
     <room>rooms\tutorialFive</room>
+    <room>rooms\menu</room>
     <room>rooms\roomTemplate</room>
   </rooms>
   <help>

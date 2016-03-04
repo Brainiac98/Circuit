@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_angle = 0;
+            <string>image_angle = 90;
 
 angle = 0;
 
@@ -45,53 +45,6 @@ if (image_angle = 0) {
 
 
 targetAngle = image_angle;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="2" enumb="1">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>room_goto_next();
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="2" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>audio_play_sound(selectOptionSnd, 10, false);
-alarm[1] = 30;
 </string>
           </argument>
         </arguments>
@@ -117,12 +70,6 @@ alarm[1] = 30;
             <string>if (image_angle != targetAngle) {
     image_angle -= 10;
 }
-
-if (image_angle = 270 &amp;&amp; canRotate = true) {
-    alarm[0] = 30;
-    audio_play_sound(selectOptionSnd, 10, false);
-    canRotate = false;
-}
 </string>
           </argument>
         </arguments>
@@ -145,38 +92,35 @@ if (image_angle = 270 &amp;&amp; canRotate = true) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (canRotate) {
+            <string>if (global.canRotate) {
     targetAngle -= 90;
     
-    with (instance_nearest(x, y, pointBObj)) { targetAngle -= 90; }
+    if (angle = 0) {
+        with (instance_nearest(x, y, pointBObj)) {
+            targetAngle -= 90;
+        }
+    } else if (angle = 1) {
+        with (instance_nearest(x, y, pointAObj)) {
+            targetAngle -= 90;
+        }
+    } else if (angle = 2) {
+        with (instance_nearest(x, y, pointDObj)) {
+            targetAngle -= 90;
+        }
+    } else if (angle = 3) {
+        with (instance_nearest(x, y, pointCObj)) {
+            targetAngle -= 90;
+        }
+    }
     
-    alarm[0] = 9;
-    canRotate = false;
+    if (global.position = 0) {
+        global.position = 3;
+    } else {
+        global.position -= 1;
+    }
     
+    audio_play_sound(rotateSnd, 10, false);
 }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="7" enumb="4">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>canRotate = true;
 </string>
           </argument>
         </arguments>
