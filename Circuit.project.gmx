@@ -25,11 +25,16 @@
     <sprite>sprites\playSpr</sprite>
     <sprite>sprites\tutorialSpr</sprite>
     <sprite>sprites\menuArrowsSpr</sprite>
+    <sprite>sprites\tutorial1TextSpr</sprite>
+    <sprite>sprites\tutorial2TextSpr</sprite>
+    <sprite>sprites\tutorial3TextSpr</sprite>
+    <sprite>sprites\tutorial4TextSpr</sprite>
+    <sprite>sprites\tutorial5TextSpr</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <objects name="objects">
-    <objects name="Tutorial Links">
+    <objects name="Fixed Position Links">
       <object>objects\endFaceRight</object>
       <object>objects\endFaceLeft</object>
       <object>objects\endFaceDown</object>
@@ -39,13 +44,13 @@
       <object>objects\circuitUpLeft</object>
       <object>objects\verticalLine</object>
       <object>objects\pointDown</object>
-      <object>objects\menuLink</object>
     </objects>
     <object>objects\quadLinkObj</object>
     <object>objects\triLinkObj</object>
     <object>objects\lineObj</object>
     <object>objects\dualObj</object>
     <object>objects\endLinkObj</object>
+    <object>objects\menuLink</object>
     <object>objects\pointAObj</object>
     <object>objects\pointBObj</object>
     <object>objects\pointCObj</object>
@@ -55,6 +60,11 @@
     <object>objects\playObj</object>
     <object>objects\tutorialObj</object>
     <object>objects\menuArrowsObj</object>
+    <object>objects\tut1TextObj</object>
+    <object>objects\tut2TextObj</object>
+    <object>objects\tut3TextObj</object>
+    <object>objects\tut4TextObj</object>
+    <object>objects\tut5TextObj</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\gameSetup</room>
