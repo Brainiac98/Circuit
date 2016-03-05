@@ -91,6 +91,10 @@ if (image_alpha &lt; 1 and global.exitMenu = false) {
 if (global.exitMenu = true) {
     image_alpha -= 0.04;
 }
+
+if (global.exitMenu = true and image_alpha &lt; 0.01) {
+    image_alpha = 0;
+}
 </string>
           </argument>
         </arguments>

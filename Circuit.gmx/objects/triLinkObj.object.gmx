@@ -87,6 +87,10 @@ if (global.levelComplete = true) {
     image_alpha -= 0.04;
     
 }
+
+if (global.levelComplete = true and image_alpha &lt; 0.01) {
+    image_alpha = 0;
+}
 </string>
           </argument>
         </arguments>
