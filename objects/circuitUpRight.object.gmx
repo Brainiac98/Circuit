@@ -78,8 +78,13 @@ targetAngle = image_angle;
     image_angle -= 10;
 }
 
-if (image_alpha &lt; 1) {
+if (image_alpha &lt; 1 and global.levelComplete = false) {
     image_alpha += 0.04;
+}
+
+if (global.levelComplete = true) {
+    image_alpha -= 0.04;
+    
 }
 </string>
           </argument>

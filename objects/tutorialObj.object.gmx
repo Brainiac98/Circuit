@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed = 0;
+            <string>image_alpha = 0;
+image_speed = 0;
 image_index = 0;
 canClick = false;
 canTrigger = true;
@@ -51,7 +52,8 @@ canTrigger = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>room_goto(tutorialOne);
+            <string>global.exitMenu = false;
+room_goto(tutorialOne);
 </string>
           </argument>
         </arguments>
@@ -81,6 +83,14 @@ canTrigger = true;
     image_index = 0;
     canClick = false;
 }
+
+if (image_alpha &lt; 1 and global.exitMenu = false) {
+    image_alpha += 0.04;
+}
+
+if (global.exitMenu = true) {
+    image_alpha -= 0.04;
+}
 </string>
           </argument>
         </arguments>
@@ -107,6 +117,7 @@ canTrigger = true;
     canTrigger = false;
     alarm[0] = 30;
     audio_play_sound(selectOptionSnd, 10, false);
+    global.exitMenu = true;
 }
 </string>
           </argument>

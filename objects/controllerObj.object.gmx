@@ -27,6 +27,32 @@
             <kind>1</kind>
             <string>audio_play_sound(backgroundThemeSnd, 10, true);
 global.levelComplete = false;
+showMessage = true;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>global.levelComplete = false;
+global.canRotate = true;
+room_goto_next();
 </string>
           </argument>
         </arguments>
@@ -49,11 +75,9 @@ global.levelComplete = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>show_message("Level Complete.");
+            <string>//show_message("Level Complete.");
 audio_play_sound(levelCompleteSnd, 10, false);
-global.canRotate = true;
-global.levelComplete = false;
-room_goto_next();
+alarm[1] = 30;
 </string>
           </argument>
         </arguments>
@@ -135,6 +159,8 @@ global.canRotate = true;
             <kind>1</kind>
             <string>randomize();
 global.position = 1;
+global.levelComplete = false;
+global.exitMenu = false;
 </string>
           </argument>
         </arguments>

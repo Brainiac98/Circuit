@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_angle = 90;
+            <string>image_alpha = 0;
+image_angle = 90;
+global.position = 1;
 
 angle = 0;
 
@@ -69,6 +71,14 @@ targetAngle = image_angle;
             <kind>1</kind>
             <string>if (image_angle != targetAngle) {
     image_angle -= 10;
+}
+
+if (image_alpha &lt; 1 and global.exitMenu = false) {
+    image_alpha += 0.04;
+}
+
+if (global.exitMenu = true) {
+    image_alpha -= 0.04;
 }
 </string>
           </argument>
