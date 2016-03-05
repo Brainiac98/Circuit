@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>audio_play_sound(backgroundThemeSnd, 10, true);
-levelComplete = false;
+global.levelComplete = false;
 </string>
           </argument>
         </arguments>
@@ -52,7 +52,7 @@ levelComplete = false;
             <string>show_message("Level Complete.");
 audio_play_sound(levelCompleteSnd, 10, false);
 global.canRotate = true;
-levelComplete = false;
+global.levelComplete = false;
 room_goto_next();
 </string>
           </argument>
@@ -81,9 +81,9 @@ room_goto_next();
 }
 
 
-if (levelComplete = false &amp;&amp; global.numTrig = global.numTriggered) {
+if (global.levelComplete = false &amp;&amp; global.numTrig = global.numTriggered) {
     alarm[0] = 5;
-    levelComplete = true;
+    global.levelComplete = true;
     global.canRotate = false;
 }
 </string>

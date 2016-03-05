@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>targetAngle = image_angle;
+            <string>image_alpha = 0;
+targetAngle = image_angle;
 
 instance_create(x, y, pointAObj);
 instance_create(x, y, pointBObj);
@@ -55,6 +56,10 @@ instance_create(x, y, pointDObj);
             <kind>1</kind>
             <string>if (image_angle != targetAngle) {
     image_angle -= 10;
+}
+
+if (image_alpha &lt; 1) {
+    image_alpha += 0.04;
 }
 </string>
           </argument>

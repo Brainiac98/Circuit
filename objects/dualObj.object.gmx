@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_angle = choose(0, 90, 180, 270);
+            <string>image_alpha = 0;
+image_angle = choose(0, 90, 180, 270);
 
 angle = 0;
 
@@ -75,6 +76,10 @@ targetAngle = image_angle;
             <kind>1</kind>
             <string>if (image_angle != targetAngle) {
     image_angle -= 10;
+}
+
+if (image_alpha &lt; 1) {
+    image_alpha += 0.04;
 }
 </string>
           </argument>
